@@ -100,4 +100,14 @@
   .dashboard-grid {
     gap: 0.75rem;
   }
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "model"
+      "health"
+      "calendar"
+      "activity"
+      "schedule";
+    gap: 1rem;
+  }
 }

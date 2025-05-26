@@ -23,7 +23,7 @@ const Header = () => {
           <Bell size={20} />
         </button>
         <div className="user-profile">
-          <img src="/placeholder.svg?height=32&width=32" alt="User Avatar" className="user-avatar" />
+          <img src="https://img.freepik.com/free-vector/blue-circle-with-white-user_78370-4707.jpg?semt=ais_hybrid&w=740" alt="User Avatar" className="user-avatar" />
         </div>
         <button className="add-btn">
           <Plus size={20} />
