@@ -1,7 +1,6 @@
 import React, { Suspense } from "react";
-import { Canvas } from "@react-three/fiber";
+import { Canvas, useLoader } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
-import { useLoader } from "@react-three/fiber";
 import { OBJLoader } from "three/examples/jsm/loaders/OBJLoader";
 import "./Human3DView.css";
 
@@ -10,7 +9,7 @@ function HumanModel() {
   return (
     <primitive
       object={model}
-      scale={0.10}
+      scale={0.1}
       position={[0, -1, 0]}
       rotation={[0, 0, 0]}
     />
@@ -57,14 +56,14 @@ export default function Human3DView() {
         />
       </Canvas>
       <div className="health-tag heart">
-          <span className="tag-icon">❤️</span>
-          <span className="tag-text">Healthy Heart</span>
-        </div>
+        <span className="tag-icon">❤️</span>
+        <span className="tag-text">Healthy Heart</span>
+      </div>
 
-        <div className="health-tag leg">
-          <span className="tag-icon">🦵</span>
-          <span className="tag-text">Healthy Leg</span>
-        </div>
+      <div className="health-tag leg">
+        <span className="tag-icon">🦵</span>
+        <span className="tag-text">Healthy Leg</span>
+      </div>
     </div>
   );
 }

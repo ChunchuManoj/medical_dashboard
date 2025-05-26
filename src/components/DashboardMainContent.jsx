@@ -1,10 +1,10 @@
-import DashboardOverview from "./DashboardOverview"
-import CalendarView from "./CalendarView"
-import UpcomingSchedule from "./UpcomingSchedule"
-import ActivityFeed from "./ActivityFeed"
-import Human3DView from "./Human3DView"
-import HealthStatusCards from "./HealthStatusCards"
-import "./DashboardMainContent.css"
+import DashboardOverview from "./DashboardOverview";
+import CalendarView from "./CalendarView";
+import UpcomingSchedule from "./UpcomingSchedule";
+import ActivityFeed from "./ActivityFeed";
+import Human3DView from "./Human3DView";
+import HealthStatusCards from "./HealthStatusCards";
+import "./DashboardMainContent.css";
 
 const DashboardMainContent = () => {
   return (
@@ -30,7 +30,7 @@ const DashboardMainContent = () => {
         </div>
       </div>
     </main>
-  )
-}
+  );
+};
 
-export default DashboardMainContent
+export default DashboardMainContent;
