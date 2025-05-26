@@ -10,8 +10,8 @@ function HumanModel() {
   return (
     <primitive
       object={model}
-      scale={0.06}
-      position={[0, -0.5, 0]}
+      scale={0.10}
+      position={[0, -1, 0]}
       rotation={[0, 0, 0]}
     />
   );
@@ -56,6 +56,15 @@ export default function Human3DView() {
           maxDistance={4}
         />
       </Canvas>
+      <div className="health-tag heart">
+          <span className="tag-icon">❤️</span>
+          <span className="tag-text">Healthy Heart</span>
+        </div>
+
+        <div className="health-tag leg">
+          <span className="tag-icon">🦵</span>
+          <span className="tag-text">Healthy Leg</span>
+        </div>
     </div>
   );
 }

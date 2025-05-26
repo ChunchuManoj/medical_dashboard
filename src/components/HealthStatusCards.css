@@ -1,21 +1,30 @@
 .health-status-cards {
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
-  margin-left: 1.5rem;
+  gap: 1rem;
+  height: 100%;
+  width: 100%;
+  padding: 0.5rem;
 }
 
 .health-card {
   background: #fff;
-  border-radius: 18px;
-  box-shadow: 0 4px 24px 0 rgba(44, 62, 80, 0.08);
-  padding: 1.25rem 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  padding: 1.25rem;
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
-  min-width: 220px;
-  max-width: 260px;
   position: relative;
+  transition: all 0.3s ease;
+  border: 1px solid #f0f0f0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.health-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
 }
 
 .health-card-header {
@@ -35,16 +44,24 @@
   background: #f5f6fa;
 }
 
+.health-info {
+  flex: 1;
+}
+
 .health-title {
   font-size: 1.1rem;
   font-weight: 600;
   color: #222b45;
+  margin-bottom: 0.25rem;
 }
 
 .health-date {
   font-size: 0.85rem;
   color: #8f9bb3;
-  margin-top: 0.1rem;
+}
+
+.health-progress-container {
+  margin-top: 0.75rem;
 }
 
 .health-progress-bar {
@@ -53,28 +70,66 @@
   background: #f1f3f6;
   border-radius: 6px;
   overflow: hidden;
+  margin-bottom: 0.5rem;
 }
 
 .health-progress {
   height: 100%;
   border-radius: 6px;
-  transition: width 0.4s cubic-bezier(0.4, 2, 0.6, 1);
+  transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.progress-text {
+  font-size: 0.875rem;
+  color: #64748b;
+  text-align: right;
 }
 
 .health-details {
   color: #4dd0e1;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   font-weight: 500;
   cursor: pointer;
-  margin-top: 0.2rem;
   align-self: flex-end;
   transition: color 0.2s;
+  text-decoration: none;
 }
 
 .health-details:hover {
   color: #222b45;
+  text-decoration: underline;
 }
 
-.tooth-icon {
-  font-size: 1.5rem;
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .health-status-cards {
+    gap: 1rem;
+    padding: 0.75rem;
+  }
+
+  .health-card {
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    width: 100%;
+  }
+
+  .health-card-header {
+    gap: 0.75rem;
+    flex-wrap: wrap;
+  }
+
+  .health-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+    flex-shrink: 0;
+  }
+
+  .health-title {
+    font-size: 1rem;
+  }
+
+  .health-date {
+    font-size: 0.8rem;
+  }
 }
