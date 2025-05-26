@@ -1,0 +1,65 @@
+.anatomy-section {
+  background: white;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+.anatomy-container {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.anatomy-figure {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.anatomy-image {
+  width: 200px;
+  height: 400px;
+  object-fit: contain;
+}
+
+.health-indicator {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: white;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.healthy-heart {
+  top: 120px;
+  left: -60px;
+  background: #10b981;
+  color: white;
+}
+
+.healthy-leg {
+  bottom: 80px;
+  left: -40px;
+  background: #06b6d4;
+  color: white;
+}
+
+.indicator-icon {
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .anatomy-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .anatomy-figure {
+    align-self: center;
+  }
+}

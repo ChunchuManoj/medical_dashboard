@@ -1,0 +1,53 @@
+.activity-feed {
+  background: white;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+.activity-header {
+  margin-bottom: 1.5rem;
+}
+
+.activity-header h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 0.5rem;
+}
+
+.activity-summary {
+  font-size: 0.875rem;
+  color: #64748b;
+}
+
+.activity-chart {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  height: 120px;
+  gap: 0.5rem;
+}
+
+.chart-bar-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  height: 100%;
+}
+
+.chart-bar {
+  width: 100%;
+  max-width: 24px;
+  background: linear-gradient(to top, #3b82f6, #60a5fa);
+  border-radius: 0.25rem 0.25rem 0 0;
+  margin-bottom: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.chart-label {
+  font-size: 0.75rem;
+  color: #64748b;
+  font-weight: 500;
+}

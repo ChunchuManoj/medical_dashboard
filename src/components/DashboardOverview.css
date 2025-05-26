@@ -1,0 +1,137 @@
+.dashboard-overview {
+  padding: 1rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.overview-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.overview-header h2 {
+  font-size: 1.24rem;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+.week-indicator {
+  background: #f0f4ff;
+  color: #4a6cf7;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.metric-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 1rem;
+  transition: all 0.3s ease;
+  border: 1px solid #eaeaea;
+  position: relative;
+  overflow: hidden;
+}
+
+.metric-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  border-color: #4a6cf7;
+}
+
+.metric-card.hovered {
+  background: linear-gradient(135deg, #ffffff 0%, #f8faff 100%);
+}
+
+.metric-content {
+  position: relative;
+  z-index: 1;
+}
+
+.metric-content h3 {
+  color: #666;
+  font-size: 0.75rem;
+  margin: 0 0 0.5rem 0;
+  font-weight: 500;
+}
+
+.metric-value {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 0.5rem;
+}
+
+.metric-change {
+  display: flex;
+  align-items: center;
+  font-size: 0.875rem;
+  font-weight: 500;
+  gap: 0.25rem;
+}
+
+.metric-change.up {
+  color: #00c853;
+}
+
+.metric-change.down {
+  color: #ff3d00;
+}
+
+.trend-icon {
+  font-size: 1rem;
+}
+
+.metric-chart {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 40px;
+  opacity: 0.2;
+  transition: opacity 0.3s ease;
+}
+
+.metric-card:hover .metric-chart {
+  opacity: 0.4;
+}
+
+.chart-line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    #4a6cf7 20%,
+    #4a6cf7 40%,
+    transparent 60%,
+    #4a6cf7 80%,
+    transparent 100%
+  );
+  mask-image: url("data:image/svg+xml,%3Csvg width='100' height='40' viewBox='0 0 100 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 20 Q 25 0, 50 20 T 100 20' stroke='black' fill='none'/%3E%3C/svg%3E");
+  mask-size: 100% 100%;
+  mask-repeat: no-repeat;
+  animation: wave 2s ease-in-out infinite;
+}
+
+@keyframes wave {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
